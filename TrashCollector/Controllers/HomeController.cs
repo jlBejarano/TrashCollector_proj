@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TrashCollector.ActionFilters;
 using TrashCollector.Models;
 
 namespace TrashCollector.Controllers

@@ -1,4 +1,4 @@
-﻿@model TrashCollector.Models.Address
+﻿@model TrashCollector.Models.Employee
 
 @{
     ViewData["Title"] = "Delete";
@@ -9,7 +9,7 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Address</h4>
+    <h4>Employee</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -19,32 +19,27 @@
             @Html.DisplayFor(model => model.Id)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Street)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Street)
+            @Html.DisplayFor(model => model.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CityId)
+            @Html.DisplayNameFor(model => model.ZipCode)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CityId)
+            @Html.DisplayFor(model => model.ZipCode)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.StateId)
+            @Html.DisplayNameFor(model => model.IdentityUserId)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.StateId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ZipCodeId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ZipCodeId)
+            @Html.DisplayFor(model => model.IdentityUserId)
         </dd>
     </dl>
     
     <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

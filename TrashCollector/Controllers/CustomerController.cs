@@ -1,24 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using TrashCollector.Data;
+using TrashCollector.Models;
 
 namespace TrashCollector.Controllers
 {
+    [Authorize(Roles ="Customer")]
     public class CustomerController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public CustomerController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         // GET: Customer
         public ActionResult Index()
         {
-            return View();
+            var applicationDbContext = _context.Customers.Include(c => c.IdentityUser);
+            return View(applicationDbContext);
         }
 
         // GET: Customer/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return View();
+            }
+            var customer = _context.Customers
+                .Include(c => c.IdentityUser)
+                .FirstOrDefault(c => c.CustomerId == id);
+            if (customer == null)
+            {
+                return View();
+            }
+            
         }
 
         // GET: Customer/Create

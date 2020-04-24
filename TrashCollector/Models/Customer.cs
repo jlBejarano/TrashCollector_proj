@@ -14,6 +14,9 @@ namespace TrashCollector.Models
         public int Id { get; set; }
         public  string Name { get; set; }
         public string Address { get; set; }
+        public string TrashPickUp { get; set; }
+        public string ExtraPickUp { get; set; }
+        public string TemporarySuspendPickUp { get; set; }
 
         [ForeignKey("IdnetityUser")]
         public string IdentityUserId { get; set; }

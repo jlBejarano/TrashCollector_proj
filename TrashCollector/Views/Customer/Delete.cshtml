@@ -31,6 +31,24 @@
             @Html.DisplayFor(model => model.Address)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TrashPickUp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrashPickUp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtraPickUp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExtraPickUp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TemporarySuspendPickUp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TemporarySuspendPickUp)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdentityUserId)
         </dt>
         <dd class = "col-sm-10">
@@ -39,6 +57,7 @@
     </dl>
     
     <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>
