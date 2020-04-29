@@ -33,5 +33,14 @@ namespace TrashCollector.Data
                
         }
 
+        internal void Add(object customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void Update(object customers)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

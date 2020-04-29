@@ -23,7 +23,7 @@ namespace TrashCollector.ActionFilters
                     context.Result = new RedirectToActionResult("Index", "Customers", null);
                     
                 }
-                else if (_claimsPrincipal.IsInRole("Emplyee"))
+                else if (_claimsPrincipal.IsInRole("Employee"))
                 {
                     context.Result = new RedirectToActionResult("Index", "Employees", null);
                 }
