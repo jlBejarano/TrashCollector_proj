@@ -51,21 +51,16 @@ namespace TrashCollector.Migrations
                         new
                         {
                             Id = "56c5822c-339b-419b-98de-aebd9876b7de",
-                            ConcurrencyStamp = "97b1306f-74f2-4fa9-9e26-70d7b1dbd071"
-                        },
-                        new
-                        {
-                            Id = "78835149-b097-4bc5-b924-b591c198fd43",
-                            ConcurrencyStamp = "8484b1d5-9e6b-483e-b587-b14ca78001b4",
+                            ConcurrencyStamp = "97b1306f-74f2-4fa9-9e26-70d7b1dbd071",
                             Name = "Customer",
-                            NormalizedName = "Customer"
+                            NormalizedName = "CUSTOMER"
                         },
                         new
                         {
                             Id = "486b070a-463c-41bf-b70b-62dc7a1ae118",
                             ConcurrencyStamp = "26764689-02a7-44e0-afda-0df5c8e46124",
                             Name = "Employee",
-                            NormalizedName = "Employee"
+                            NormalizedName = "EMPLOYEE"
                         },
                         new
                         {
